@@ -21,30 +21,6 @@ class PCA9685:
         self._reset()
 
     @property
-    def i2c(self) -> machine.SoftI2C:
-        """Get/Store I2C object for board memory interactions."""
-        return self._i2c
-
-    @i2c.setter
-    def i2c(self, i2c: machine.SoftI2C) -> None:
-        if type(i2c) is not machine.SoftI2C:
-            raise ValueError(f"Invalid i2c instance specified. \
-                               Expects {machine.SoftI2C}.")
-        self._i2c = i2c
-
-    @property
-    def address(self) -> int:
-        """Get/Store board I2C address for use with self.i2c."""
-        return self._address
-
-    @address.setter
-    def address(self, address: int) -> None:
-        if not 64 <= address <= 255:
-            raise ValueError(f"Address ({address}) invalid. \
-                               Expects {int} between 0x40 and 0xFF.")
-        self._address = address
-
-    @property
     def frequency(self) -> int:
         """Get/Store the PWM frequency for the board.
 
