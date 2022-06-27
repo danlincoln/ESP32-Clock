@@ -20,7 +20,7 @@ class DS3231:
 
     @hour.setter
     def hour(self, hour) -> None:
-        if hour < 0 or hour > 23:
+        if not 0 <= hour <= 23:
             raise ValueError("Hour must be between 0 and 23.")
         self._i2c.writeto_mem(self.address, 0x02, _encodeByte(hour))
 
@@ -31,7 +31,7 @@ class DS3231:
 
     @minute.setter
     def minute(self, minute) -> None:
-        if minute < 0 or minute > 59:
+        if not 0 <= minute <= 59:
             raise ValueError("Minute must be between 0 and 59.")
         self._i2c.writeto_mem(self.address, 0x01, _encodeByte(minute))
 
