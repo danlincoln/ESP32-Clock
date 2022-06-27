@@ -15,7 +15,7 @@ The ESP32 runs [Micropython](https://micropython.org/).
 * `Digit Face.stl` This is the digit face. It's 200mm x 50mm, which will make this a big clock.
 
 ## Thanks
-I wrote the board drivers in `./clock/` with the help of several older repos I found on GitHub. So, special thanks to the following contributors!
+I wrote the board drivers in `./clock/` with the help of several other repos I found on GitHub. So, special thanks to the following contributors!
 
 * https://github.com/notUnique/DS3231micro
 * https://github.com/adafruit/micropython-adafruit-pca9685
